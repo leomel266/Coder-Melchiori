@@ -1,0 +1,21 @@
+.contador{
+    display: flex;
+    justify-content: center;
+}
+
+.suma{
+    width: 20px;
+}
+.resta{
+    width: 20px;
+}
+
+.Ctitulo{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.Acarrito{
+    display: flex;
+    justify-content: center;
+}
