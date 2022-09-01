@@ -10,7 +10,7 @@ const ItemCount = () => {
         setContador(contador + 1)
     }
     return (
-        <div>
+        <div className='widget-1'>
             <h1>Contador</h1>
             <div className='contador'>
                 <button className='suma' onClick={suma}>+</button>
