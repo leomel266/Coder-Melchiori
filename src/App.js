@@ -5,6 +5,7 @@ import CartWidget from './components/CartWidget';
 import ItemCount from './components/ItemCount';
 import	'./components/itemCount.css'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <ItemListContainer1 greetings='Saludos desde el contenedor'/>
       </header>
       <ItemCount/>
+      <ItemDetailContainer/>
       <ItemListContainer/>
 
     </div>
