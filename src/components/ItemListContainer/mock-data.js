@@ -1,4 +1,4 @@
-
+import t1 from "./img/t1.jpg"
 
 const data=[
     {
@@ -6,6 +6,7 @@ const data=[
         name:'Semillas de pasto',
         description:'alta calidad',
         price:'$80',
+        category:'insumos',
         image:'imagen',
         stock:10
     },
@@ -14,6 +15,7 @@ const data=[
         name:'Rollo',
         description:'alimento para ganado',
         price:'$80',
+        category:'rollos',
         image:'imagen',
         stock:15
     },
@@ -22,8 +24,18 @@ const data=[
         name:'trigo',
         description:'materia prima',
         price:'$80',
+        category:'insumos',
         image:'imagen',
         stock:13
+    },
+    {
+        id:4,
+        name:'Tractor',
+        description:'alta calidad',
+        price:'$80',
+        category:'vehiculos',
+        image:t1,
+        stock:10
     }
 ]
 

@@ -1,25 +1,26 @@
 import './App.css';
 import NavBar from './components/NavBar/NavBar';
-import ItemListContainer1 from './components/ItemListContainer1';
-import CartWidget from './components/CartWidget';
-import ItemCount from './components/ItemCount';
 import	'./components/itemCount.css'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
-    <div className='container'>
-      <header className='header'>
+    <BrowserRouter>
+      <div className='container'>
         <NavBar/>
-        <CartWidget/>
-        <ItemListContainer1 greetings='Saludos desde el contenedor'/>
-      </header>
-      <ItemCount/>
-      <ItemDetailContainer/>
-      <ItemListContainer/>
-
-    </div>
+        <ItemDetailContainer/>
+          <Routes>
+            <Route path='/' element={<ItemListContainer/>}/>
+            <Route path='/productos/' element={<ItemListContainer/>}/>
+            <Route path='/productos/:categoryId' element={<ItemListContainer/>}/>
+            <Route path='/item/:productId' element={<ItemDetailContainer/>}/>
+          </Routes>
+        <Footer/>
+      </div>
+    </BrowserRouter>
   );
 }
 

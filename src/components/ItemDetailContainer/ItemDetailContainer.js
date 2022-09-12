@@ -1,35 +1,37 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
-import data from '../ItemListContainer/mock-data';
-import ItemDetail from '../ItemDatail/ItemDetail';
+import React from "react";
+import { useState, useEffect } from "react";
+import data from "../ItemListContainer/mock-data";
+import ItemDetail from "../ItemDatail/ItemDetail";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
-    const [item, setItem] = useState([]);
+  const { productId } = useParams();
 
-    const getData= new Promise((resolve,reject)=>{
-        setTimeout(() => {
-            resolve(data);
-        }, 2000);
+  const [item, setItem] = useState({});
 
-    })
+  const getItem = (id) => {
+      return new Promise((resolve, reject) => {
+        const producto = data.find((item) => item.id === parseInt(id)); 
+        // si en la constante producto le pongo item de nombre me sale error
+      resolve(item);
+    });
+  };
 
-    useEffect(() => {
-        getData.then((result)=>{
-            setItem(result)
-        })
-    }, []);
-    return (
-        <div className='aside'>
-            {
-                item.length > 0 ? (
+  useEffect(() => {
+    const getProducto = async () => {
+      const producto = await getItem(productId);
+      console.log("producto", producto);
+      setItem(producto);
+    };
+    getProducto();
+  }, [productId]);
 
-                    <ItemDetail itemDetail={item}/>
-                ):(
-                    <div>Cargando...</div>
-                )
-            }
-        </div>
-    );
-}
+  return (
+    <div className="aside">
+      <p>Item detail Container</p>
+      <ItemDetail item={item} />
+    </div>
+  );
+};
 
 export default ItemDetailContainer;
