@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
 
   const getItem = (id) => {
     return new Promise((resolve, reject) => {
-      const producto = data.find((item) => item.id === parseInt(id));
+      const item = data.find((item) => item.id === parseInt(id));
       // si en la constante producto le pongo item de nombre me sale error
       resolve(item);
     });
