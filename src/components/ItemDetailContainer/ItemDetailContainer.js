@@ -10,9 +10,9 @@ const ItemDetailContainer = () => {
   const [item, setItem] = useState({});
 
   const getItem = (id) => {
-      return new Promise((resolve, reject) => {
-        const producto = data.find((item) => item.id === parseInt(id)); 
-        // si en la constante producto le pongo item de nombre me sale error
+    return new Promise((resolve, reject) => {
+      const producto = data.find((item) => item.id === parseInt(id));
+      // si en la constante producto le pongo item de nombre me sale error
       resolve(item);
     });
   };
@@ -29,7 +29,7 @@ const ItemDetailContainer = () => {
   return (
     <div className="aside">
       <p>Item detail Container</p>
-      <ItemDetail item={item} />
+      {item.id ? <ItemDetail item={item} /> : <p>Cargando...</p>}
     </div>
   );
 };
