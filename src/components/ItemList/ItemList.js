@@ -4,12 +4,12 @@ import Item from "../Item/Item";
 const ItemList = ({ items }) => {
   return (
     <>
-      <div>
-        <h1>Item list</h1>
-        {items.map((producto) => (
-          <Item key={producto.id} item={producto} />
-        ))}
-      </div>
+      <h1>Item list</h1>
+        <div className="row">
+          {items.map((producto) => (
+            <Item key={producto.id} item={producto} />
+          ))}
+        </div>
     </>
   );
 };

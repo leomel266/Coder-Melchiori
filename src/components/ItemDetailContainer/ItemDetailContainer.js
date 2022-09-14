@@ -27,7 +27,7 @@ const ItemDetailContainer = () => {
   }, [productId]);
 
   return (
-    <div className="aside">
+    <div className="contenido">
       <p>Item detail Container</p>
       {item?.id ? <ItemDetail item={item} /> : <p>Cargando...</p>}
     </div>

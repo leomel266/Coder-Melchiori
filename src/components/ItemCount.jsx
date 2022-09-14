@@ -1,24 +1,29 @@
 import React from 'react';
 import { useState } from 'react';
 
-const ItemCount = () => {
-    const [contador, setContador] = useState(0);
+const ItemCount = ({stock, initial, onAdd}) => {
+    const [count, setCount] = useState(initial);
+
     const resta=()=>{
-        setContador(contador - 1)
+        if(count > 1){
+            setCount(count-1)
+        }
     }
     const suma=()=>{
-        setContador(contador + 1)
+        if(count < stock){
+            setCount(count + 1)
+        }
     }
     return (
         <div className='widget-1'>
-            <h1>Contador</h1>
+            <h1>Stock disponible: {stock}</h1>
             <div className='contador'>
-                <button className='suma' onClick={suma}>+</button>
-                <h2 className='Ctitulo'>{contador}</h2>
-                <button className='resta' onClick={resta}>-</button>
+                <button disabled={stock===0} className='suma btn btn-success' onClick={suma}>+</button>
+                <h2 className='Ctitulo'>{count}</h2>
+                <button disabled={stock===0} className='resta btn btn-success' onClick={resta}>-</button>
             </div>
             <div className='Acarrito'>
-                <button>Agregar al carrito</button>
+                <button className='btn btn-primary' onClick={()=> onAdd(count)}>Agregar al carrito</button>
             </div>
             
         </div>
