@@ -18,9 +18,9 @@ const ItemCount = ({stock, initial, onAdd}) => {
         <div className='widget-1'>
             <h1>Stock disponible: {stock}</h1>
             <div className='contador'>
-                <button disabled={stock===0} className='suma btn btn-success' onClick={suma}>+</button>
+                <button disabled={stock===0} className='suma btn btn-success' onClick={resta}>-</button>
                 <h2 className='Ctitulo'>{count}</h2>
-                <button disabled={stock===0} className='resta btn btn-success' onClick={resta}>-</button>
+                <button disabled={stock===0} className='resta btn btn-success' onClick={suma}>+</button>
             </div>
             <div className='Acarrito'>
                 <button className='btn btn-primary' onClick={()=> onAdd(count)}>Agregar al carrito</button>
