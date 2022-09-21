@@ -1,8 +1,13 @@
 import React from "react";
 import cart from "./img/cart.png";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import CartContext from "../../context/CartContext";
 
 const CartWidget = () => {
+
+  const {getTotalProducts}= useContext(CartContext)
+
   return (
     <div>
         <Link to='/cart'>
@@ -17,7 +22,7 @@ const CartWidget = () => {
           color: "black",
         }}
       >
-        2
+        {getTotalProducts()}
       </span>
 
         </Link>

@@ -5,7 +5,7 @@ const data=[
         id:1,
         name:'Semillas de pasto',
         description:'alta calidad',
-        price:'$80',
+        price:70,
         category:'insumos',
         image:'imagen',
         stock:10
@@ -14,7 +14,7 @@ const data=[
         id:2,
         name:'Rollo',
         description:'alimento para ganado',
-        price:'$80',
+        price:80,
         category:'rollos',
         image:'imagen',
         stock:15
@@ -23,7 +23,7 @@ const data=[
         id:3,
         name:'trigo',
         description:'materia prima',
-        price:'$80',
+        price:80,
         category:'insumos',
         image:'imagen',
         stock:13
@@ -32,7 +32,7 @@ const data=[
         id:4,
         name:'Tractor',
         description:'alta calidad',
-        price:'$80',
+        price:85,
         category:'vehiculos',
         image:t1,
         stock:10
