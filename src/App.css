@@ -43,7 +43,7 @@
 }
 
 body {
-  background: #282c34;
+  background: #9BA3EB;
 }
 
 .container {
@@ -67,7 +67,7 @@ body {
 .container .contenido,
 .container .sidebar,
 .container .footer {
-  background: #fff;
+  background: #646fd4;
   padding: 20px;
   border-radius: 4px;
 }

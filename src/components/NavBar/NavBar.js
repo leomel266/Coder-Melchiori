@@ -6,7 +6,8 @@ import CartWidget from "../CartWidget/CartWidget";
 const NavBar = () => {
   return (
     <div className="header">
-      <nav className="navbar navbar-expand-lg bg-dark">
+      <h1>Seeds</h1>
+      <nav className="navbar navbar-expand-lg">
         <div className="container-fluid">
           <Link className="navbar-brand" to="/">
             Home

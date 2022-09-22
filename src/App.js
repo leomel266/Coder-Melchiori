@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import CartContainer from "./components/CartContainer/CartContainer";
 import { CartProvider } from "./context/CartContext";
+import './components/NavBar/style.css'
 
 function App() {
 

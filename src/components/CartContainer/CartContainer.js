@@ -7,7 +7,7 @@ const CartContainer = () => {
     useContext(CartContext);
 
   return (
-    <div>
+    <div className="contenido">
       <table className="table table-striped">
         <thead>
           <tr>
@@ -23,29 +23,36 @@ const CartContainer = () => {
             {productCartList.length > 0 ? (
               <>
                 {productCartList.map((item) => (
-                  <tr>
+                  <tr key={item.id}>
                     <th scope="row">{item.id}</th>
                     <td>{item.name}</td>
                     <td>Cantidad: {item.quantity}</td>
                     <td>Precio Unitario: ${item.price}</td>
                     <td>Precio Productos: ${item.quantityPrice}</td>
-                    <button onClick={() => removeItem(item.id)}>
-                      eliminar producto
-                    </button>
+                    <td>
+                      <button className="fa-solid fa-delete-left" onClick={() => removeItem(item.id)}>
+                      </button>
+                    </td>
                   </tr>
                 ))}
               </>
             ) : (
-              <>
-                <p> El carrito esta vacio, Agrega algun producto</p>
-                <Link to="/">Ir al Listado de productos</Link>
-              </>
+              <tr>
+                <td>Carrito vacio</td>
+              </tr>
             )}
           </>
         </tbody>
       </table>
-      <p>Precio total: ${getTotalPrice()}</p>
-      <button onClick={clear}>Vaciar carrtito</button>
+      {
+        productCartList.length > 0 ? 
+      <>
+        <p>Precio total: ${getTotalPrice()}</p>
+        <button onClick={clear}>Vaciar carrtito</button>
+      </>
+      :
+      <Link to='/'>Ver productos</Link>
+      }
     </div>
   );
 };
