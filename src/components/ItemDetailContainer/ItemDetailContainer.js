@@ -23,13 +23,21 @@ const ItemDetailContainer = () => {
       console.log("producto", producto);
       setItem(producto);
     };
-    getProducto();
+    setTimeout(() => {
+      getProducto();
+      
+    }, 1000);
   }, [productId]);
 
   return (
     <div className="contenido">
       <p>Item detail Container</p>
-      {item?.id ? <ItemDetail item={item} /> : <p>Cargando...</p>}
+      {item?.id ? <ItemDetail item={item} /> : 
+      <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>}
     </div>
   );
 };

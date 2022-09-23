@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const Item = ({ item }) => {
   return (
     <div className="col-sm-4">
-      <div className="card" style={{ width: "100%" }}>
-        <img src={item.image} className="card-img-top" alt="..." />
+      <div className="card" style={{ width: "80%", margin:'10px' }}>
+        <img src={item.image} className="card-img-top" alt="..." style={{width:'100%'}} />
         <div className="card-body">
           <h5 className="card-title">{item.name}</h5>
           <p className="card-text">{item.description.substring(0, 30)}...</p>

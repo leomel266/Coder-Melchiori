@@ -13,7 +13,7 @@ const ItemListContainer = () => {
   const promesa = new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(data);
-    }, 1500);
+    }, 1000);
   });
 
   useEffect(() => {
@@ -33,7 +33,15 @@ const ItemListContainer = () => {
     <div className="contenido">
       <h2>Productos</h2>
       <div className="row">
-        <ItemList items={productos} />
+        {productos.length > 0 ? (
+          <ItemList items={productos} />
+        ) : (
+          <div class="d-flex justify-content-center">
+            <div class="spinner-border" role="status">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

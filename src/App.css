@@ -128,3 +128,14 @@ body {
       "footer footer footer";
   }
 }
+
+.eliminar{
+  border: none;
+  background-color: #646fd4;
+  height: 30px;
+}
+
+.vaciar{
+  background-color: aliceblue;
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.514);
+}
