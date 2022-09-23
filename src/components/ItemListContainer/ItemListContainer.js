@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import ItemList from "../ItemList/ItemList";
 import { useParams } from "react-router-dom";
 import { db } from "../../utils/firebase";
-import {collection, getDocs} from 'firebase/firestore'
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 const ItemListContainer = () => {
   const { categoryId } = useParams();
@@ -31,21 +31,21 @@ const ItemListContainer = () => {
   //   });
   // }, [categoryId]);
 
-    useEffect(() => {
-      //creamos referencia de la coleccion
-      const queryRef= collection(db, 'items');
-      getDocs(queryRef)
-      .then(response =>{
-        const result = response.docs.map(doc=>{
-          const newItem={
-            id:doc.id,
-            ...doc.data(),
-            
-          }
-          return newItem
-        })
-        setProductos(result)
-      })
+  useEffect(() => {
+    //creamos referencia de la coleccion
+    const queryRef = !categoryId
+      ? collection(db, "items")
+      : query(collection(db, "items"), where("category", "==", categoryId));
+    getDocs(queryRef).then((response) => {
+      const result = response.docs.map((doc) => {
+        const newItem = {
+          id: doc.id,
+          ...doc.data(),
+        };
+        return newItem;
+      });
+      setProductos(result);
+    });
   }, [categoryId]);
 
   return (
