@@ -9,24 +9,24 @@ const CartWidget = () => {
   const {getTotalProducts}= useContext(CartContext)
 
   return (
-    <div>
+    <>
         <Link to='/cart'>
-      <img src={cart} alt="cart" style={{ width: 55 }} />
+      <img src={cart} alt="cart" style={{ width: 20 }}/>
       <span
         style={{
-          backgroundColor: "white",
           borderRadius: "50%",
-          width: "10px",
-          heigth: "10px",
-          fontSize: "10px",
-          color: "black",
+          width: "15px",
+          heigth: "15px",
+          fontSize: "15px",
+          color: "aliceblue",
+          backgroundColor:"#57be6c",
         }}
       >
         {getTotalProducts()}
       </span>
 
         </Link>
-    </div>
+    </>
   );
 };
 

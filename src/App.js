@@ -1,5 +1,4 @@
 import "./App.css";
-import NavBar from "./components/NavBar/NavBar";
 import "./components/itemCount.css";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
@@ -7,7 +6,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import CartContainer from "./components/CartContainer/CartContainer";
 import { CartProvider } from "./context/CartContext";
-import './components/NavBar/style.css'
+import Header from "./components/Header/Header";
+import ContactoPage from "./components/ContactoPage/ContactoPage";
+
 
 function App() {
 
@@ -15,8 +16,8 @@ function App() {
   return (
       <CartProvider>
         <BrowserRouter>
-          <div className="container">
-            <NavBar />
+          <body className="container">
+            <Header />
             <Routes>
               <Route path="/" element={<ItemListContainer />} />
               <Route path="/productos/" element={<ItemListContainer />} />
@@ -27,8 +28,9 @@ function App() {
               <Route path="/item/:productId" element={<ItemDetailContainer />} />
               <Route path="/cart" element={<CartContainer />} />
             </Routes>
+            <ContactoPage/>
             <Footer />
-          </div>
+          </body>
         </BrowserRouter>
       </CartProvider>
   );

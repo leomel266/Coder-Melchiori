@@ -40,10 +40,11 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: #9BA3EB;
+  background: #FFFFFF;
 }
 
 .container {
@@ -56,7 +57,7 @@ body {
   grid-template-rows: repeat(4, auto);
   grid-template-areas:
     "header header header"
-    "contenido contenido contenido"
+    "contenido contenido sidebar"
     "widget-1 widget-2 sidebar"
     "footer footer footer";
   font-family: 'Roboto', sans-serif;
@@ -67,7 +68,7 @@ body {
 .container .contenido,
 .container .sidebar,
 .container .footer {
-  background: #646fd4;
+  background: #FFFFFF;
   padding: 20px;
   border-radius: 4px;
 }
@@ -87,8 +88,7 @@ body {
   text-align: center;
   min-height: 100px;
   grid-area: sidebar;
-  background-color: aliceblue;
-  overflow: scroll;
+  background-color: #FFFFFF;
 }
 
 .container .widget-1,
@@ -99,7 +99,6 @@ body {
 
 .container .widget-1 {
   grid-area: widget-1;
-  overflow: scroll;
   height: 300px;
 }
 
@@ -131,11 +130,65 @@ body {
 
 .eliminar{
   border: none;
-  background-color: #646fd4;
-  height: 30px;
+  background-color: #FFFFFF;
+  width: 35px;
+  border-radius: 50%;
+  background-color: #57be6c;
+  transition: 200ms;
+}
+
+.eliminar:hover{
+  transform: scale(1.01,1.01);
+  box-shadow: 7px 13px 37px #7c7c7c;
 }
 
 .vaciar{
-  background-color: aliceblue;
-  box-shadow: 1px 1px rgba(0, 0, 0, 0.514);
+  background-color: #57be6c;
+  color: #FFFFFF;
+  transition: 400ms;
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+  font-weight: bold;
+
+}
+
+.vaciar:hover{
+  transform: scale(1.05,1.05);
+  box-shadow: 7px 13px 37px #7c7c7c;
+
+}
+
+.enviar{
+  background-color: #57be6c;
+  color: #FFFFFF;
+  transition: 400ms;
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+  font-weight: bold;
+}
+
+.enviar:hover{
+  transform: scale(1.05,1.05);
+  box-shadow: 7px 13px 37px #7c7c7c;
+}
+
+.card{
+  box-shadow: 7px 13px 37px #7c7c7c;
+}
+
+.detalles{
+  background-color: #57be6c;
+  color: #FFFFFF;
+  text-decoration: none;
+  transition: 500ms;
+  font-weight: bold;
+}
+
+.detalles:hover{
+  transform: scale(1.05,1.05);
+  box-shadow: 7px 13px 37px #7c7c7c;
+  color: #FFFFFF;
+
 }

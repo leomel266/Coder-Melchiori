@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import swal from "@sweetalert/with-react";
 
 const CartContext = React.createContext();
 
@@ -25,24 +26,72 @@ export const CartProvider = ({ children }) => {
             newArreglo[productPos].quantity=newArreglo[productPos].quantity + quantity
             newArreglo[productPos].quantityPrice= newArreglo[productPos].quantity * newArreglo[productPos].price
             setProductCartList(newArreglo)
+            addPlusAlert()
         }else{
             // Si no existe, agregue al carrito
             const newArreglo = [...productCartList];
             newProduct.quantityPrice= newProduct.quantity * newProduct.price
             newArreglo.push(newProduct);
             setProductCartList(newArreglo);
+            addAlert()
 
         }
     }
+    
+    //SweeAlert Start
+
+    const addAlert=()=>{
+        swal({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Añadido con exito al carrito!',
+          Button: false,
+          timer: 2000,
+      })
+      }
+
+      const addPlusAlert=()=>{
+        swal({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Aumento la cantidad del producto!',
+          Button: false,
+          timer: 2000,
+      })
+      }
+
+      const removeAlert=()=>{
+        swal({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Se ha removido con exito!!',
+          Button: false,
+          timer: 2000,
+      })
+      }
+
+      const vaciarAlert=()=>{
+        swal({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Carrito vacio!!',
+          Button: false,
+          timer: 2000,
+      })
+      }
+
+      //SweetAlert Ends
 
     const removeItem = (itemId)=>{
         console.log("itemId", itemId)
         const newArreglo = productCartList.filter(product=>product.id !== itemId);
         setProductCartList(newArreglo)
+        removeAlert()
     }
 
     const clear = ()=>{
         setProductCartList([])
+        vaciarAlert()
     }
 
     const getTotalPrice = ()=>{

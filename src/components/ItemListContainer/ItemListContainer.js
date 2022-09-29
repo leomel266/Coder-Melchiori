@@ -50,8 +50,9 @@ const ItemListContainer = () => {
 
   return (
     <div className="contenido">
-      <h2>Productos</h2>
-      <div className="row">
+      <h2 className="text-center">Productos</h2>
+      <p className="text-center">lorem50</p>
+      <div>
         {productos.length > 0 ? (
           <ItemList items={productos} />
         ) : (

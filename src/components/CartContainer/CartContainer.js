@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import CartContext from "../../context/CartContext";
 import { Link } from "react-router-dom";
 import { addDoc, collection, doc, updateDoc } from "firebase/firestore";
@@ -7,6 +7,11 @@ import { db } from "../../utils/firebase";
 const CartContainer = () => {
   const { productCartList, removeItem, clear, getTotalPrice } =
     useContext(CartContext);
+
+  useEffect(() => {
+    const datos = localStorage.getItem('productos')
+    console.log('datos', JSON.parse(datos))
+  }, []);
 
   const [idOrder, setIdOrder] = useState('');
 
@@ -48,14 +53,13 @@ const CartContainer = () => {
         <Link to='/'>Ver productos</Link>
       </>
       :<>
-      <table className="table table-striped">
+      <table className="table table-striped table-borderless">
         <thead>
           <tr>
-            <th scope="col">ID</th>
             <th scope="col">Nombre</th>
             <th scope="col">Cantidad</th>
-            <th scope="col">Price</th>
-            <th scope="col">Price</th>
+            <th scope="col">Precio Unitario</th>
+            <th scope="col">Precio Productos</th>
           </tr>
         </thead>
         <tbody>
@@ -64,11 +68,10 @@ const CartContainer = () => {
               <>
                 {productCartList.map((item) => (
                   <tr key={item.id}>
-                    <th scope="row">{item.id}</th>
                     <td>{item.name}</td>
-                    <td>Cantidad: {item.quantity}</td>
-                    <td>Precio Unitario: ${item.price}</td>
-                    <td>Precio Productos: ${item.quantityPrice}</td>
+                    <td>{item.quantity}</td>
+                    <td>Precio: ${item.price}</td>
+                    <td>Precio: ${item.quantityPrice}</td>
                     <td>
                       <button className="eliminar fa-solid fa-delete-left" onClick={() => removeItem(item.id)}>
                       </button>
@@ -88,7 +91,7 @@ const CartContainer = () => {
         productCartList.length > 0 ? 
       <>
         <p>Precio total: ${getTotalPrice()}</p>
-        <button onClick={clear} className='vaciar btn btn-ligth'>Vaciar carrtito</button>
+        <button onClick={clear} className='vaciar'>Vaciar carrtito</button>
         <form onSubmit={sendOrder}>
           <label>Nombre:</label><br/>
           <input type='text'/><br/>
@@ -96,7 +99,7 @@ const CartContainer = () => {
           <input type = 'text'/><br/>
           <label>Email: </label><br/>
           <input type ='email'/><br/><br/>
-          <button type="submit">Enviar orden</button>
+          <button className="enviar" type="submit">Enviar orden</button>
         </form>
       </>
       :
