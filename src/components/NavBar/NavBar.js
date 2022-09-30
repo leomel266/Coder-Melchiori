@@ -8,13 +8,13 @@ const NavBar = () => {
     <nav class="main-nav">
       <ul class="main-nav-list">
         <li>
-          <Link to="/">home</Link>
+          <Link to="/productos">Productos</Link>
         </li>
         <li>
-          <Link to="/">productos</Link>
+          <Link to="/productos/vehiculos">Vehiculos</Link>
         </li>
         <li>
-          <Link to="/">dsafa</Link>
+          <Link to="/Productos/insumos">Insumos</Link>
         </li>
         <CartWidget/>
       </ul>

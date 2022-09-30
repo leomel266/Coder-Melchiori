@@ -1,6 +1,5 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import data from "../ItemListContainer/mock-data";
 import ItemDetail from "../ItemDatail/ItemDetail";
 import { useParams } from "react-router-dom";
 import { db } from "../../utils/firebase";

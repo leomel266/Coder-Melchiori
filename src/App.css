@@ -58,7 +58,6 @@ body {
   grid-template-areas:
     "header header header"
     "contenido contenido sidebar"
-    "widget-1 widget-2 sidebar"
     "footer footer footer";
   font-family: 'Roboto', sans-serif;
 }
