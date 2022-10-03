@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactoPage = () => {
   return (
-      <div className="sidebar">
+      <div className="sidebar text-center p-2">
         <h3 style={{ fontWeight: "bold" }}>Contacto</h3>
         <p>Resuelva sus dudas contactandonos atravez de estos medios</p>
         <section>

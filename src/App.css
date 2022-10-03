@@ -47,7 +47,7 @@ body {
   background: #FFFFFF;
 }
 
-.container {
+/* .container {
   width: 90%;
   max-width: 1000px;
   margin: 20px auto;
@@ -125,7 +125,7 @@ body {
       "widget-1 widget-1 widget-2"
       "footer footer footer";
   }
-}
+} */
 
 .eliminar{
   border: none;

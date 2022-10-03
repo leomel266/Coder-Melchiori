@@ -4,7 +4,7 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className="footer text-center">
       <h4>Todos los derechos reservados</h4>
       <section class="ft-social">
         <ul class="ft-social-list">

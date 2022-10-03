@@ -48,7 +48,7 @@ const ItemListContainer = () => {
   }, [categoryId]);
 
   return (
-    <div className="contenido">
+    <div className="contenido p-2">
       <h2 className="text-center">Productos</h2>
       <p className="text-center">lorem50</p>
       <div>
