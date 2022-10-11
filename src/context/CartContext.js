@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import swal from "@sweetalert/with-react";
+import { toast, Toaster } from "react-hot-toast";
 
 const CartContext = React.createContext();
 
@@ -45,43 +45,19 @@ export const CartProvider = ({ children }) => {
   //SweeAlert Start
 
   const addAlert = () => {
-    swal({
-      position: "top-end",
-      icon: "success",
-      title: "Añadido con exito al carrito!",
-      Button: false,
-      timer: 2000,
-    });
+    toast.success("Añadido al carrito!");
   };
 
   const addPlusAlert = () => {
-    swal({
-      position: "top-end",
-      icon: "success",
-      title: "Aumento la cantidad del producto!",
-      Button: false,
-      timer: 2000,
-    });
+    toast.success("Aumento la cantidad del producto!");
   };
 
   const removeAlert = () => {
-    swal({
-      position: "top-end",
-      icon: "success",
-      title: "Se ha removido con exito!!",
-      Button: false,
-      timer: 2000,
-    });
+    toast.success("Se ha removido con exito!");
   };
 
   const vaciarAlert = () => {
-    swal({
-      position: "top-end",
-      icon: "success",
-      title: "Carrito vacio!!",
-      Button: false,
-      timer: 2000,
-    });
+    toast.success("Carrito vacio!");
   };
 
   //SweetAlert Ends
@@ -117,17 +93,22 @@ export const CartProvider = ({ children }) => {
   };
 
   return (
-    <CartContext.Provider
-      value={{
-        productCartList,
-        addItem,
-        removeItem,
-        clear,
-        getTotalPrice,
-        getTotalProducts,
-      }}>
-      {children}
-    </CartContext.Provider>
+    <>
+      <CartContext.Provider
+        value={{
+          productCartList,
+          addItem,
+          removeItem,
+          clear,
+          getTotalPrice,
+          getTotalProducts,
+        }}>
+        {children}
+      </CartContext.Provider>
+      <div>
+        <Toaster />
+      </div>
+    </>
   );
 };
 
