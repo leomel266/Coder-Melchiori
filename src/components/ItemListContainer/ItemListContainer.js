@@ -44,20 +44,23 @@ const ItemListContainer = () => {
         return newItem;
       });
       setProductos(result);
+      setTimeout(() => {
+        setProductos(result);
+      }, 500);
     });
   }, [categoryId]);
 
   return (
-    <div className="contenido p-2">
-      <h2 className="text-center">Productos</h2>
-      <p className="text-center">lorem50</p>
+    <div className='contenido p-2'>
+      <h2 className='text-center'>Productos</h2>
+      <p className='text-center'>lorem50</p>
       <div>
         {productos.length > 0 ? (
           <ItemList items={productos} />
         ) : (
-          <div class="d-flex justify-content-center">
-            <div class="spinner-border" role="status">
-              <span class="visually-hidden">Loading...</span>
+          <div class='d-flex justify-content-center'>
+            <div class='spinner-border' role='status'>
+              <span class='visually-hidden'>Loading...</span>
             </div>
           </div>
         )}

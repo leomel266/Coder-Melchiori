@@ -7,32 +7,27 @@ import Footer from "./components/Footer/Footer";
 import CartContainer from "./components/CartContainer/CartContainer";
 import { CartProvider } from "./context/CartContext";
 import Header from "./components/Header/Header";
-import ContactoPage from "./components/ContactoPage/ContactoPage";
-
 
 function App() {
-
-
   return (
-      <CartProvider>
-        <BrowserRouter>
-          <body className="container">
-            <Header />
-            <Routes>
-              <Route path="/" element={<ItemListContainer />} />
-              <Route path="/productos/" element={<ItemListContainer />} />
-              <Route
-                path="/productos/:categoryId"
-                element={<ItemListContainer />}
-              />
-              <Route path="/item/:productId" element={<ItemDetailContainer />} />
-              <Route path="/cart" element={<CartContainer />} />
-            </Routes>
-            <ContactoPage/>
-            <Footer />
-          </body>
-        </BrowserRouter>
-      </CartProvider>
+    <CartProvider>
+      <BrowserRouter>
+        <body className='container'>
+          <Header />
+          <Routes>
+            <Route path='/' element={<ItemListContainer />} />
+            <Route path='/productos/' element={<ItemListContainer />} />
+            <Route
+              path='/productos/:categoryId'
+              element={<ItemListContainer />}
+            />
+            <Route path='/item/:productId' element={<ItemDetailContainer />} />
+            <Route path='/cart' element={<CartContainer />} />
+          </Routes>
+          <Footer />
+        </body>
+      </BrowserRouter>
+    </CartProvider>
   );
 }
 

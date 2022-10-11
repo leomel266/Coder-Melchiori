@@ -1,17 +1,23 @@
-li{
-    list-style: none;
+li {
+  list-style: none;
 }
 
 .ft-social {
-    padding: 0 1.875rem 1.25rem;
+  padding: 0 1.875rem 1.25rem;
 }
 .ft-social-list {
-    display: flex;
-    justify-content: center;
-    border-top: 1px #777 solid; 
-    padding-top: 1.25rem;
+  display: flex;
+  justify-content: center;
+  border-top: 1px #777 solid;
+  padding-top: 1.25rem;
 }
 .ft-social-list li {
-    margin: 0.5rem;
-    font-size: 1.25rem;
+  margin: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.footer {
+  width: 100%;
+  height: 20vh;
+  margin-top: 80px;
 }

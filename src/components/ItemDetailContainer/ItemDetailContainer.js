@@ -4,6 +4,7 @@ import ItemDetail from "../ItemDatail/ItemDetail";
 import { useParams } from "react-router-dom";
 import { db } from "../../utils/firebase";
 import { getDoc, doc } from "firebase/firestore";
+import "./ItemDetailContainer.css";
 
 const ItemDetailContainer = () => {
   const { productId } = useParams();
@@ -21,31 +22,32 @@ const ItemDetailContainer = () => {
   useEffect(() => {
     const getProducto = async () => {
       //creamos la ref del producto
-      const queryRef = doc(db, 'items', productId);
+      const queryRef = doc(db, "items", productId);
       // hacemos solicitud a firebase
       const response = await getDoc(queryRef);
-      const newItem ={
-        id:response.id,
-        ...response.data()
-      }
-      setItem(newItem)
+      const newItem = {
+        id: response.id,
+        ...response.data(),
+      };
+      setItem(newItem);
     };
     setTimeout(() => {
       getProducto();
-      
     }, 1000);
   }, [productId]);
 
-
   return (
-    <div className="contenido">
+    <div className='contenido-detail'>
       <p>Item detail Container</p>
-      {item?.id ? <ItemDetail item={item} /> : 
-      <div class="d-flex justify-content-center">
-            <div class="spinner-border" role="status">
-              <span class="visually-hidden">Loading...</span>
-            </div>
-          </div>}
+      {item?.id ? (
+        <ItemDetail item={item} />
+      ) : (
+        <div class='d-flex justify-content-center'>
+          <div class='spinner-border' role='status'>
+            <span class='visually-hidden'>Loading...</span>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

@@ -1,9 +1,9 @@
 /**
  * Images a now responsive
  */
- img {
-	max-width: 100%;
-	height: auto;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /**
@@ -11,12 +11,12 @@
  * width for big screens
  */
 .container-Header {
-	width: 960px;
-	max-width: 100%;
-	padding: 20px;
-	margin: 0 auto;
-	box-shadow: 7px 13px 20px #7c7c7c;
-	border-radius: 5px;
+  width: 960px;
+  max-width: 100%;
+  padding: 20px;
+  margin: 0 auto;
+  box-shadow: 7px 13px 20px #7c7c7c;
+  border-radius: 5px;
 }
 
 /**
@@ -31,11 +31,10 @@
  * small screens
  */
 .main-header .container-Header {
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	flex-wrap: wrap;
-
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 /**
@@ -45,16 +44,16 @@
  * and contents centered
  */
 .main-nav ul {
-	margin: 1em 0 .5em;
-	text-align: center;
+  margin: 1em 0 0.5em;
+  text-align: center;
 }
 .main-nav li {
-	display: inline;
+  display: inline;
 }
 .main-nav a {
-	display: inline-block;
-	padding: .5em 1.5em;
-	list-style: none;
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  list-style: none;
 }
 
 /**
@@ -63,8 +62,8 @@
  * distribute space
  * between the flex-items
  */
- @media (min-width: 960px) {
-	.main-header .container-Header {
-		justify-content: space-between;
-	}
+@media (min-width: 960px) {
+  .main-header .container-Header {
+    justify-content: space-between;
+  }
 }
