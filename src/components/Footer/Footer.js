@@ -4,38 +4,24 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div className="footer text-center">
+    <div className='footer text-center'>
       <h4>Todos los derechos reservados</h4>
-      <section class="ft-social">
-        <ul class="ft-social-list">
+      <section className='ft-social'>
+        <ul className='ft-social-list'>
           <li>
-            <Link to="/">
-              <i class="fab fa-facebook"></i>
+            <Link
+              target='_blank'
+              rel='noopener noreferrer'
+              to='https://github.com/leomel266'>
+              <i className='fab fa-github'></i>
             </Link>
           </li>
           <li>
-            <Link to="/">
-              <i class="fab fa-twitter"></i>
-            </Link>
-          </li>
-          <li>
-            <Link to="/">
-              <i class="fab fa-instagram"></i>
-            </Link>
-          </li>
-          <li>
-            <Link to="/">
-              <i class="fab fa-github"></i>
-            </Link>
-          </li>
-          <li>
-            <Link to="/">
-              <i class="fab fa-linkedin"></i>
-            </Link>
-          </li>
-          <li>
-            <Link to="/">
-              <i class="fab fa-youtube"></i>
+            <Link
+              target='_blank'
+              rel='noopener noreferrer'
+              to='https://www.linkedin.com/in/leonardo-melchiori-013678225/'>
+              <i className='fab fa-linkedin'></i>
             </Link>
           </li>
         </ul>

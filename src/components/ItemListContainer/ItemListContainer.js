@@ -52,15 +52,19 @@ const ItemListContainer = () => {
 
   return (
     <div className='contenido p-2'>
-      <h2 className='text-center'>Productos</h2>
-      <p className='text-center'>lorem50</p>
+      <h2 className='text-center' style={{ fontWeight: "bold", fontSize: 50 }}>
+        Productos
+      </h2>
+      <p className='text-center' style={{ marginBottom: 50 }}>
+        Desde el campo a tu casa
+      </p>
       <div>
         {productos.length > 0 ? (
           <ItemList items={productos} />
         ) : (
-          <div class='d-flex justify-content-center'>
-            <div class='spinner-border' role='status'>
-              <span class='visually-hidden'>Loading...</span>
+          <div className='d-flex justify-content-center'>
+            <div className='spinner-border' role='status'>
+              <span className='visually-hidden'>Loading...</span>
             </div>
           </div>
         )}

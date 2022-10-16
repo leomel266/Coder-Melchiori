@@ -22,11 +22,15 @@ const ItemDetail = ({ item }) => {
           <div className='card w-80' style={{ width: "100%" }}>
             <img src={item.image} className='card-img-top' alt='...' />
             <div className='card-body text-center'>
-              <h5 className='card-title'>{item.name.substring(0, 20)}</h5>
+              <h5 className='card-title' style={{ fontWeight: "bold" }}>
+                {item.name.substring(0, 20)}
+              </h5>
               <p className='card-text'>
                 {item.description.substring(0, 30)}...
               </p>
-              <p className='card-text'>Precio: ${item.price}</p>
+              <p className='card-text' style={{ fontWeight: "bold" }}>
+                Precio: ${item.price}
+              </p>
               <p className='card-text'>En Carrito: {contador}</p>
               <ItemCount stock={10} initial={0} onAdd={onAdd} />
               {contador > 0 && (

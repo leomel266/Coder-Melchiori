@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header className='header main-header mt-2 mb-5'>
       <div className='container-Header'>
-        <h1 class='mh-logo' style={{ fontWeight: "bold" }}>
+        <h1 className='mh-logo' style={{ fontWeight: "bold" }}>
           <Link style={{ textDecoration: "none", color: "black" }} to='/'>
             Flash<span style={{ color: "#57be6c" }}>Agro</span>
           </Link>

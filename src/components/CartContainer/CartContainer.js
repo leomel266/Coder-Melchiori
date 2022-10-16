@@ -91,11 +91,14 @@ const CartContainer = () => {
               <p style={{ fontWeight: "bold" }}>
                 Precio total: ${getTotalPrice()}
               </p>
-              <button onClick={clear} className='vaciar'>
+              <button
+                onClick={clear}
+                className='vaciar'
+                style={{ marginBottom: 20 }}>
                 Vaciar carrtito
               </button>
               <form onSubmit={sendOrder}>
-                <label className='mt-1'>Nombre:</label>
+                <label className='mt-1'>Nombre</label>
                 <br />
                 <input
                   className='inpLabel'
@@ -103,7 +106,7 @@ const CartContainer = () => {
                   type='text'
                 />
                 <br />
-                <label className='mt-1'>Telefono: </label>
+                <label className='mt-1'>Telefono </label>
                 <br />
                 <input
                   className='inpLabel'
@@ -111,7 +114,7 @@ const CartContainer = () => {
                   type='text'
                 />
                 <br />
-                <label className='mt-1'>Email: </label>
+                <label className='mt-1'>Email </label>
                 <br />
                 <input
                   className='inpLabel'
