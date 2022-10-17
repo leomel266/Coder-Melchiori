@@ -107,7 +107,11 @@ const CartContainer = () => {
                 }}>
                 <form
                   onSubmit={sendOrder}
-                  style={{ display: "flex", flexDirection: "column" }}>
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    margin: "auto",
+                  }}>
                   <label
                     className='mt-1'
                     style={{ fontSize: "1em", fontWeight: "bold" }}>
