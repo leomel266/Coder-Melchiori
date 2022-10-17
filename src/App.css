@@ -46,6 +46,10 @@
 body {
   background: #ffffff;
   font-family: "Roboto", sans-serif;
+  padding: 0.5em;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* .container {

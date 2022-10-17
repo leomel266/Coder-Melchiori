@@ -51,7 +51,7 @@ const ItemListContainer = () => {
   }, [categoryId]);
 
   return (
-    <div className='contenido p-2'>
+    <div className='contenido p-2' style={{ marginBottom: 30 }}>
       <h2 className='text-center' style={{ fontWeight: "bold", fontSize: 50 }}>
         Productos
       </h2>

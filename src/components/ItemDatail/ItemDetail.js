@@ -18,7 +18,7 @@ const ItemDetail = ({ item }) => {
   return (
     <>
       <div className='row p-2'>
-        <div className='col-sm-5'>
+        <div className='col-lg-5' style={{ marginBottom: 30 }}>
           <div className='card w-80' style={{ width: "100%" }}>
             <img src={item.image} className='card-img-top' alt='...' />
             <div className='card-body text-center'>

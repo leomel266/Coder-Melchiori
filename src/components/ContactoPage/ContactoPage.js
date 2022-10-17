@@ -4,7 +4,7 @@ import nosotros from "./img/nosotros.jpg";
 
 const ContactoPage = () => {
   return (
-    <div className='col-sm-5 text-center p-2'>
+    <div className='col-lg-5 text-center p-2'>
       <div>
         <h4 style={{ fontWeight: "bold", marginBottom: 30 }}>Sobre nosotros</h4>
         <img
