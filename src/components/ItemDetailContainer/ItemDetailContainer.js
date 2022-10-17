@@ -4,7 +4,6 @@ import ItemDetail from "../ItemDatail/ItemDetail";
 import { useParams } from "react-router-dom";
 import { db } from "../../utils/firebase";
 import { getDoc, doc } from "firebase/firestore";
-import "./ItemDetailContainer.css";
 
 const ItemDetailContainer = () => {
   const { productId } = useParams();

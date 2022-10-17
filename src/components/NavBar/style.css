@@ -1,80 +1,23 @@
-/**
- * Images a now responsive
- */
- img {
-	max-width: 100%;
-	height: auto;
-}
-
-/**
- * Limit the container in
- * width for big screens
- */
-.container-Header {
-	width: 960px;
-	max-width: 100%;
-	padding: 20px;
-	margin: 0 auto;
-}
-
-/**
- * By using display: flex
- * Logo and nav are in 2 cols
- * align-items make them
- * vertically centered
- * justify-content distribute
- * horizontal spaces around
- * and flex-wrap break the
- * things in two lines in
- * small screens
- */
-.main-header .container-Header {
-	display: flex;
-	align-items: center;
-	justify-content: space-around;
-	flex-wrap: wrap;
-}
-
-/**
- * The followings are to
- * make things more
- * clean and airy
- * and contents centered
- */
 .main-nav ul {
-	margin: 1em 0 .5em;
-	text-align: center;
+  margin: 1em 0 0.5em;
+  text-align: center;
 }
 .main-nav li {
-	display: inline;
+  display: inline;
 }
 .main-nav a {
-	display: inline-block;
-	padding: .5em 1.5em;
-    text-decoration: none;
-	border-radius: 5px;
-	margin: 5px;
-	color: aliceblue;
-	font-weight: bold;
-	transition: 400ms;
-	background-color: #57be6c;
+  display: inline-block;
+  padding: 0.5em 1.5em;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 5px;
+  color: aliceblue;
+  font-weight: bold;
+  transition: 400ms;
+  background-color: #57be6c;
 }
 
-.main-nav a:hover{
-	box-shadow: 7px 13px 20px #7c7c7c;
-	transform: scale(1.05,1.05);
-
+.main-nav a:hover {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  transform: scale(1.05, 1.05);
 }
-
-/**
- * Space-around become
- * Space-between to
- * distribute space
- * between the flex-items
- */
- @media (min-width: 960px) {
-	.main-header .container-Header {
-		justify-content: space-between;
-	}
-}
-

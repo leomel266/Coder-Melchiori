@@ -11,6 +11,7 @@ const ContactoPage = () => {
           src={nosotros}
           alt='sada'
           style={{ width: 400, marginBottom: 20, borderRadius: 10 }}
+          className='shadow-lg mb-5 bg-white rounded'
         />
         <p style={{ marginBottom: 30 }}>
           Somos una empresa especializada en brindar los mejores productos y
@@ -19,7 +20,12 @@ const ContactoPage = () => {
         </p>
       </div>
       <h3 style={{ fontWeight: "bold" }}>Contactenos</h3>
-      <img src={atencion} alt='sada' style={{ width: 400, marginBottom: 20 }} />
+      <img
+        src={atencion}
+        alt='sada'
+        style={{ width: 400, marginBottom: 20 }}
+        className='shadow-lg mb-5 bg-white rounded'
+      />
       <p>Resuelva sus dudas contactandonos atravez de estos medios</p>
       <section>
         <ul>

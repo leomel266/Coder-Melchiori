@@ -17,9 +17,11 @@ const ItemDetail = ({ item }) => {
 
   return (
     <>
-      <div className='row p-2'>
+      <div className='row p-2 '>
         <div className='col-lg-5' style={{ marginBottom: 30 }}>
-          <div className='card w-80' style={{ width: "100%" }}>
+          <div
+            className='card w-80 shadow-lg mb-5 bg-white rounded'
+            style={{ width: "100%" }}>
             <img src={item.image} className='card-img-top' alt='...' />
             <div className='card-body text-center'>
               <h5 className='card-title' style={{ fontWeight: "bold" }}>
@@ -40,10 +42,9 @@ const ItemDetail = ({ item }) => {
                     style={{ textDecoration: "none" }}
                     to='/cart'>
                     <button
-                      className='btn btn-light mt-1 w-75'
+                      className='btn btn-light mt-1 w-75 shadow-lg p-3 mb-2 bg-white rounded'
                       style={{
                         fontWeight: "bold",
-                        boxShadow: "7px 13px 37px #7c7c7c",
                       }}>
                       Ir al carrito
                     </button>
@@ -53,10 +54,9 @@ const ItemDetail = ({ item }) => {
                     style={{ textDecoration: "none" }}
                     to='/productos'>
                     <button
-                      className='btn btn-light mt-1 w-75'
+                      className='btn btn-light mt-1 w-75 shadow-lg p-3 mb-2 bg-white rounded'
                       style={{
                         fontWeight: "bold",
-                        boxShadow: "7px 13px 37px #7c7c7c",
                       }}>
                       Seguir comprando
                     </button>

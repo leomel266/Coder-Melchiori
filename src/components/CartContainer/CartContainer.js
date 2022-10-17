@@ -93,45 +93,63 @@ const CartContainer = () => {
               </p>
               <button
                 onClick={clear}
-                className='vaciar'
+                className='vaciar shadow-lg p-3 mb-4 rounded'
                 style={{ marginBottom: 20 }}>
                 Vaciar carrtito
               </button>
-              <form onSubmit={sendOrder}>
-                <label className='mt-1'>Nombre</label>
-                <br />
-                <input
-                  className='inpLabel'
-                  style={{ outline: "none" }}
-                  type='text'
-                />
-                <br />
-                <label className='mt-1'>Telefono </label>
-                <br />
-                <input
-                  className='inpLabel'
-                  style={{ outline: "none" }}
-                  type='text'
-                />
-                <br />
-                <label className='mt-1'>Email </label>
-                <br />
-                <input
-                  className='inpLabel'
-                  style={{ outline: "none" }}
-                  type='email'
-                />
-                <br />
-                <br />
-                <button className='enviar' type='submit'>
-                  Enviar orden
-                </button>
-              </form>
+              <div
+                className='shadow-lg p-3 mb-5 mt-2 bg-white rounded'
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  maxWidth: 300,
+                  justifyContent: "center",
+                }}>
+                <form
+                  onSubmit={sendOrder}
+                  style={{ display: "flex", flexDirection: "column" }}>
+                  <label
+                    className='mt-1'
+                    style={{ fontSize: "1em", fontWeight: "bold" }}>
+                    Nombre
+                  </label>
+                  <input
+                    className='inpLabel'
+                    style={{ outline: "none" }}
+                    type='text'
+                  />
+                  <label
+                    className='mt-1'
+                    style={{ fontSize: "1em", fontWeight: "bold" }}>
+                    Telefono{" "}
+                  </label>
+                  <input
+                    className='inpLabel'
+                    style={{ outline: "none" }}
+                    type='text'
+                  />
+                  <label
+                    className='mt-1'
+                    style={{ fontSize: "1em", fontWeight: "bold" }}>
+                    Email{" "}
+                  </label>
+                  <input
+                    className='inpLabel mb-5'
+                    style={{ outline: "none" }}
+                    type='email'
+                  />
+                  <button
+                    className='enviar shadow-lg p-3 mb-4 rounded'
+                    type='submit'>
+                    Enviar orden
+                  </button>
+                </form>
+              </div>
             </>
           ) : (
             <Link style={{ textDecoration: "none" }} to='/'>
               <button
-                className='cartBtn btn btn-light'
+                className='cartBtn btn btn-light shadow-lg p-3 mb-5 bg-white rounded'
                 style={{ fontWeight: "bold" }}>
                 Ver Productos
               </button>

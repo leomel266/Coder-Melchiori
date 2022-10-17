@@ -6,7 +6,7 @@ import logo from "./img/logo.png";
 
 const Header = () => {
   return (
-    <header className='header main-header mt-2 mb-5'>
+    <header className='header main-header mt-2 mb-5 shadow-lg p-3 mb-5 bg-white rounded'>
       <div className='container-Header'>
         <h1 className='mh-logo' style={{ fontWeight: "bold" }}>
           <Link style={{ textDecoration: "none", color: "black" }} to='/'>
