@@ -48,8 +48,13 @@ const CartContainer = () => {
     <div className='contenido'>
       {idOrder ? (
         <>
-          <p>Su orden fue creado, id {idOrder} </p>
-          <Link to='/'>Ver productos</Link>
+          <p>Su orden fue creado, id: {idOrder} </p>
+          <Link
+            className='cartBtn btn btn-light shadow-lg p-3 mb-5 bg-white rounded'
+            style={{ fontWeight: "bold", textDecoration: "none" }}
+            to='/'>
+            Ver productos
+          </Link>
         </>
       ) : (
         <>
